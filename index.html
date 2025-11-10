@@ -12,31 +12,91 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @font-face {
+      font-family: dm-sans;
+      src: url(assets/fonts/DMSans-VariableFont_opsz,wght.ttf);
+    }
+
+    body {
+      background-color: rgb(239, 239, 239);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem
+    }
+
+    .card {
+      font-family: dm-sans;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .bigtext {
+      font-size: x-large;
+      font-weight: 450;
+    }
+
+    #yellow100 {
+      background-color: hsl(31, 66%, 93%);
+    }
+
+    #yellow500 {
+      background-color: hsl(39, 100%, 71%);
+    }
+
+    #purple100 {
+      background-color:hsl(254, 88%, 90%);
+    }
+
+    #purple500 {
+      background-color: hsl(256, 67%, 59%);
+    }
+
+    #white {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    #black {
+      background-color:  hsl(0, 0%, 7%);
+    }
   </style>
 </head>
 <body>
-
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
-
-  Manage multiple accounts and platforms.
-
-  Maintain a consistent posting schedule.
-
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
-
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
-
-  Write your content using AI.
-  
+  <div class="grid-container">
+    <div class="card" id="yellow100" style="grid-row: auto;">
+      <div class="bigtext">Create and schedule content <span style="color:hsl(256, 67%, 59%)"><em>quicker</em>.</span></div>
+    </div>
+    <div class="card" id="purple500" style="grid-column: span 2; color: white">
+      <div class="bigtext" style="font-size:xx-large">Social Media <span style="color: hsl(39, 100%, 71%)">10x</span> <em>Faster</em> with AI</div>
+      Over 4,000 5-star reviews
+    </div>
+    <div class="card" id="purple100" style="grid-row: span 2">
+      <div class="bigtext">Schedule to social media.</div>
+      Optimize post timings to publish content at the perfect time for your audience.
+    </div>
+    <div class="card" id="yellow500" style="grid-row: span 2">
+      <div class="bigtext">Write your content using AI.</div>
+      <img src="assets/images/illustration-ai-content.webp" style="width: 100%;">
+    </div>
+    <div class="card" id="white">
+      <div class="bigtext">Manage multiple accounts and platforms.</div>
+    </div>
+    <div class="card" id="yellow500">
+      <div class="bigtext">Maintain a consistent posting schedule.</div>
+    </div>
+    <div class="card" id="white">
+      >56% faster audience growth
+    </div>
+    <div class="card" id="purple500" style="grid-column: span 2">
+      <div class="bigtext">Grow followers with non-stop content.</div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Charlotte Lew</a>.
   </div>
 </body>
 </html>
