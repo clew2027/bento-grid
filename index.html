@@ -20,12 +20,17 @@
 
     body {
       background-color: rgb(239, 239, 239);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
 
     .grid-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem
+      gap: 1.5rem;
+      width: 90%;
     }
 
     .card {
@@ -36,7 +41,18 @@
 
     .bigtext {
       font-size: x-large;
-      font-weight: 450;
+      font-weight: 500;
+      line-height: 1.0;
+    }
+
+    .mtext {
+      font-size: medium;
+      margin-top: 10px;
+    }
+
+    .stext {
+      font-size: small;
+      margin-top: 10px;
     }
 
     #yellow100 {
@@ -45,6 +61,7 @@
 
     #yellow500 {
       background-color: hsl(39, 100%, 71%);
+      overflow: hidden;
     }
 
     #purple100 {
@@ -62,37 +79,84 @@
     #black {
       background-color:  hsl(0, 0%, 7%);
     }
+
+    img {
+      width: 100%;
+    }
+
+    #bottom-left {
+      display: flex;
+      background-color: hsl(256, 67%, 59%);
+      color: white;
+      align-items: center;
+    }
+
+    #top-card {
+      display: flex;
+      align-items: center;
+      background-color: hsl(256, 67%, 59%);
+      grid-column: span 2; 
+      color: white;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    
+    .img-wrapper {
+      width: 100%;
+      height: 70px;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
   <div class="grid-container">
-    <div class="card" id="yellow100" style="grid-row: auto;">
-      <div class="bigtext">Create and schedule content <span style="color:hsl(256, 67%, 59%)"><em>quicker</em>.</span></div>
+   
+    <div class="card" id="yellow100" style="padding: 60px 20px; grid-row: span 1 / 2;"><div class="bigtext">Create and schedule content <span style="color:hsl(256, 67%, 59%)"><em>quicker</em>.</span></div>
+      <img src="assets/images/illustration-create-post.webp">
     </div>
-    <div class="card" id="purple500" style="grid-column: span 2; color: white">
-      <div class="bigtext" style="font-size:xx-large">Social Media <span style="color: hsl(39, 100%, 71%)">10x</span> <em>Faster</em> with AI</div>
-      Over 4,000 5-star reviews
+      
+    
+    <div class="card" id="top-card">
+      <div class="bigtext" style="font-size:xx-large">Social Media <span style="color: hsl(39, 100%, 71%)">10x</span> <em>Faster</em> with AI
+        </div><img src="assets/images/illustration-five-stars.webp" style="width: 50%;">       
+        <div style="font-size: small; font-weight: 400;">Over 4,000 5-star reviews</div>
+      
     </div>
-    <div class="card" id="purple100" style="grid-row: span 2">
+    <div class="card" id="purple100" style="grid-row: span 2; overflow: hidden; padding: 40px 20px">
       <div class="bigtext">Schedule to social media.</div>
+      <img src="assets/images/illustration-schedule-posts.webp" style="width: 150%; margin: 20px 0" alt="scheduling illustration">
+      
       Optimize post timings to publish content at the perfect time for your audience.
     </div>
-    <div class="card" id="yellow500" style="grid-row: span 2">
-      <div class="bigtext">Write your content using AI.</div>
-      <img src="assets/images/illustration-ai-content.webp" style="width: 100%;">
+     <div class="card" id="yellow500" style="grid-row: span 2;">
+      <div class="bigtext" style="margin-bottom: 30px;">Write your content using AI.</div>
+      <img src="assets/images/illustration-ai-content.webp">
     </div>
+    
     <div class="card" id="white">
+      <img src="assets/images/illustration-multiple-platforms.webp">
       <div class="bigtext">Manage multiple accounts and platforms.</div>
     </div>
-    <div class="card" id="yellow500">
+    <div class="card" id="yellow500" style="padding-bottom: 0;">
       <div class="bigtext">Maintain a consistent posting schedule.</div>
+      <div class="img-wrapper">
+      <img src="assets/images/illustration-consistent-schedule.webp"" alt="schedule illustration">
+    </div>
     </div>
     <div class="card" id="white">
-      >56% faster audience growth
+      <div style="font-size: xx-large; font-weight: 500;">>56%</div> 
+      faster audience growth
+      <img src="assets/images/illustration-audience-growth.webp" style="margin-top: 20px; width: 70%;">
     </div>
-    <div class="card" id="purple500" style="grid-column: span 2">
-      <div class="bigtext">Grow followers with non-stop content.</div>
+    <div class="card" id="bottom-left" style="grid-column: span 2">
+      <img src="assets/images/illustration-grow-followers.webp" style="width: 50%;">
+      <span class="bigtext">Grow followers with non-stop content.</span>
     </div>
+   
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
